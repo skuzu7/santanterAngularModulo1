@@ -1,0 +1,21 @@
+<div class="orders-dashboard">
+  <h2>Meus Pedidos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Pedido</th>
+        <th>Data</th>
+        <th>Valor</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.id }}</td>
+        <td>{{ order.date }}</td>
+        <td>{{ order.value }}</td>
+        <td>{{ order.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

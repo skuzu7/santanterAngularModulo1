@@ -1,0 +1,46 @@
+{
+  "WELCOME": "Welcome",
+  "LOG_IN_INFO": "Log in to auth0labs to continue to Auth0 Angular Sample.",
+  "EMAIL_ADDRESS_PLACEHOLDER": "Email address",
+  "CONTINUE": "Continue",
+  "FORGOT_PASSWORD": "Forgot password?",
+  "OR": "OR",
+  "CONTINUE_WITH_GOOGLE": "Continue with Google",
+  "DONT_HAVE_ACCOUNT": "Don't have an account? Sign up",
+  "REGISTRATION_FORM_TITLE": "Registration Form",
+  "USERNAME_LABEL": "Username",
+  "USERNAME_PLACEHOLDER": "Enter your username",
+  "USERNAME_REQUIRED": "Username is required.",
+  "EMAIL_LABEL": "Email",
+  "EMAIL_PLACEHOLDER": "Enter your email",
+  "EMAIL_REQUIRED": "Email is required.",
+  "EMAIL_INVALID": "Invalid email format.",
+  "PASSWORD_LABEL": "Password",
+  "PASSWORD_PLACEHOLDER": "Enter your password",
+  "BUTTON.LEARN_MORE": "Learn More",
+  "PASSWORD_REQUIRED": "Password is required.",
+  "PASSWORD_MINLENGTH": "Password must be at least 6 characters.",
+  "CONFIRM_PASSWORD_LABEL": "Confirm Password",
+  "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm your password",
+  "CONFIRM_PASSWORD_REQUIRED": "Confirming password is required.",
+  "PASSWORDS_NOT_MATCHING": "Passwords do not match.",
+  "REGISTER_BUTTON": "Register",
+  "BACK_BUTTON": "Back",
+  "ALREADY_HAVE_ACCOUNT": "Already have an account? Log in",
+  "LOGIN_BUTTON": "Log in",
+  "HEADER": {
+    "TITLE": "IT Works",
+    "DESCRIPTION": "IT Works is a tax intelligence company that, through technology, promotes increased efficiency, productivity and performance in the fiscal and tax areas of our clients and partners. We are a team of highly specialized professionals in the accounting, fiscal, tax, legislative and technology areas with the purpose of offering complete solutions for tax intelligence since 2010. We have considered from the beginning that no matter the size of the company, our mission is always to deliver the appropriate solution quickly, safely and transparently!",
+    "GET_QUOTE": "Get Quote Now",
+    "LEARN_MORE": "Learn More"
+  },
+  "PRACTICE_ADVICE": {
+    "TITLE": "Discover our solutions",
+    "DESCRIPTION": "Discover our solutions"
+  },
+  "WHO_WE_ARE": {
+    "TITLE": "Who We Are"
+  }
+
+
+}

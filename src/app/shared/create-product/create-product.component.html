@@ -1,0 +1,33 @@
+<div class="create-product-form">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="p-field">
+      <label for="name">Name</label>
+      <input id="name" type="text" pInputText formControlName="name" required>
+      <small class="p-error" *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">Name is required</small>
+    </div>
+
+    <div class="p-field">
+      <label for="price">Price</label>
+      <p-inputNumber id="price" formControlName="price" mode="currency" currency="USD" locale="en-US" [min]="0"></p-inputNumber>
+      <small class="p-error" *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">Price must be greater than or equal to 0</small>
+    </div>
+
+    <div class="p-field">
+      <label for="description">Description</label>
+      <textarea id="description" rows="5" cols="30" pInputTextarea formControlName="description"></textarea>
+    </div>
+
+    <div class="p-field image-upload">
+      <label for="image">Image</label>
+      <input type="file" id="image" (change)="onImageSelected($event)" accept="image/*" #imageInput>
+      <button pButton type="button" label="Choose Image" icon="pi pi-image" (click)="imageInput.click()"></button>
+      <div *ngIf="selectedImage">
+        <img [src]="selectedImage" class="image-preview" alt="Selected Image">
+      </div>
+    </div>
+
+    <button pButton type="submit" label="Create" [disabled]="productForm.invalid"></button>
+  </form>
+</div>
+
+<p-toast></p-toast>

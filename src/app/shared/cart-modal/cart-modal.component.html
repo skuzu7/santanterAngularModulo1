@@ -1,0 +1,28 @@
+<!-- cart-modal.component.html -->
+<div class="cart-modal">
+  <div class="cart-items">
+    <div *ngIf="cartItems.length === 0" class="empty-cart">
+      O carrinho está vazio.
+    </div>
+    <div *ngFor="let item of cartItems" class="cart-item">
+      <div class="item-info">
+        <span class="item-name">{{ item.name }}</span>
+        <span class="item-price">{{ item.price | currency:'BRL' }}</span>
+      </div>
+      <div class="item-quantity">
+        <button (click)="decrementQuantity(item)">-</button>
+        <span>{{ item.amount }}</span>
+        <button (click)="incrementQuantity(item)">+</button>
+      </div>
+      <button class="remove-item" (click)="removeItem(item)">Remover</button>
+    </div>
+  </div>
+  <div class="cart-summary">
+    <div class="total">
+      <span>Total:</span>
+      <span>{{ getTotal() | currency:'BRL' }}</span>
+    </div>
+    <button class="clear-cart" (click)="clearCart()">Limpar Carrinho</button>
+    <button class="checkout" (click)="checkout()">Finalizar Compra</button>
+  </div>
+</div>

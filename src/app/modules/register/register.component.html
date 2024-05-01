@@ -1,0 +1,56 @@
+<<div class="registration-container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="p-card registration-card" fxFlex="400px">
+    <div class="card-title" translate>REGISTRATION_FORM_TITLE</div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username" translate>USERNAME_LABEL</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input id="username" type="text" pInputText formControlName="username" [placeholder]="'USERNAME_PLACEHOLDER' | translate" class="p-inputtext-sm" />
+        </div>
+        <p-message severity="error" *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.errors?.['required']" [text]="'USERNAME_REQUIRED' | translate" styleClass="error-message"></p-message>
+      </div>
+
+      <div class="form-group">
+        <label for="email" translate>EMAIL_LABEL</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+          <input id="email" type="email" pInputText formControlName="email" [placeholder]="'EMAIL_PLACEHOLDER' | translate" class="p-inputtext-sm" />
+        </div>
+        <p-message severity="error" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.errors?.['required']" [text]="'EMAIL_REQUIRED' | translate" styleClass="error-message"></p-message>
+        <p-message severity="error" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.errors?.['email']" [text]="'EMAIL_INVALID' | translate" styleClass="error-message"></p-message>
+      </div>
+
+      <div class="form-group">
+        <label for="password" translate>PASSWORD_LABEL</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+          <input id="password" type="password" pInputText formControlName="password" [placeholder]="'PASSWORD_PLACEHOLDER' | translate" class="p-inputtext-sm" />
+        </div>
+        <p-message severity="error" *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.errors?.['required']" [text]="'PASSWORD_REQUIRED' | translate" styleClass="error-message"></p-message>
+        <p-message severity="error" *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.errors?.['minlength']" [text]="'PASSWORD_MINLENGTH' | translate" styleClass="error-message"></p-message>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password" translate>CONFIRM_PASSWORD_LABEL</label>
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+          <input id="confirm-password" type="password" pInputText formControlName="confirmPassword" [placeholder]="'CONFIRM_PASSWORD_PLACEHOLDER' | translate" class="p-inputtext-sm" />
+        </div>
+        <p-message severity="error" *ngIf="registrationForm.get('confirmPassword')?.touched && registrationForm.get('confirmPassword')?.errors?.['required']" [text]="'CONFIRM_PASSWORD_REQUIRED' | translate" styleClass="error-message"></p-message>
+        <p-message severity="error" *ngIf="registrationForm.hasError('notSame') && registrationForm.get('confirmPassword')?.touched" [text]="'PASSWORDS_NOT_MATCHING' | translate" styleClass="error-message"></p-message>
+      </div>
+
+      <div class="button-group" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <button type="submit" pButton label="Register" icon="pi pi-check" class="p-button-success" [disabled]="registrationForm.invalid"></button>
+        <button type="button" pButton label="Back" icon="pi pi-times" class="p-button-secondary" (click)="navigateToHomePage()"></button>
+      </div>
+    </form>
+
+    <!-- Login Section dentro do cartão de registro, ajustada para ficar mais abaixo -->
+    <div class="login-description" fxLayout="row" fxLayoutAlign="center center" style="margin-top: 20px;">
+      <span translate>ALREADY_HAVE_ACCOUNT</span>
+      <button type="button" pButton label="Login" icon="pi pi-sign-in" class="custom-login-button" (click)="navigateToLoginPage()"></button>
+    </div>
+  </div>
+</div>

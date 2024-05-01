@@ -1,0 +1,117 @@
+// Paleta de cores
+$primary-color: #11051c;
+$secondary-color: #e5383b; // Um vermelho vibrante
+$text-color: #ffffff;
+$bg-color: #1c1c1c;
+$hover-color: lighten($secondary-color, 5%); // Cor para hover
+
+// Estilos globais
+.container {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 20px;
+}
+
+// Estilos da seção hero com banner
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://www.gsuplementos.com.br/upload/banner/8fe5cf1ac4aaace7995d8b9126814cad.webp') no-repeat center center;
+  background-size: cover;
+  color: $text-color;
+  text-align: center;
+  padding: 60px 20px;
+
+  .hero-banner {
+    background-color: rgba($primary-color, 0.8);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  h1, p {
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: $secondary-color;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+// Estilos da seção de produtos
+.products {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .product-item {
+    background-color: $primary-color;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.45);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      border-bottom: 4px solid $secondary-color;
+    }
+
+    .product-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-details {
+      h3, p {
+        margin-bottom: 10px;
+      }
+
+      .product-price {
+        color: $secondary-color;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: $secondary-color;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+    }
+  }
+}
+
+// Estilização do rodapé
+app-footer {
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 20px;
+  text-align: center;
+}

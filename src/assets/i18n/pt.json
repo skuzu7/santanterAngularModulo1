@@ -1,0 +1,50 @@
+{
+  "WELCOME": "Bem-vindo",
+  "LOG_IN_INFO": "Faça login no auth0labs para continuar no Exemplo Angular da Auth0.",
+  "EMAIL_ADDRESS_PLACEHOLDER": "Endereço de email",
+  "CONTINUE": "Continuar",
+  "FORGOT_PASSWORD": "Esqueceu a senha?",
+  "OR": "OU",
+  "CONTINUE_WITH_GOOGLE": "Continue com o Google",
+  "DONT_HAVE_ACCOUNT": "Não tem uma conta? Inscreva-se",
+  "REGISTRATION_FORM_TITLE": "Formulário de Registro",
+  "USERNAME_LABEL": "Nome de usuário",
+  "USERNAME_PLACEHOLDER": "Digite seu nome de usuário",
+  "USERNAME_REQUIRED": "Nome de usuário é obrigatório.",
+  "EMAIL_LABEL": "Email",
+  "EMAIL_PLACEHOLDER": "Digite seu email",
+  "EMAIL_REQUIRED": "Email é obrigatório.",
+  "EMAIL_INVALID": "Formato de email inválido.",
+  "PASSWORD_LABEL": "Senha",
+  "BUTTON.LEARN_MORE": "Saiba Mais",
+  "PASSWORD_PLACEHOLDER": "Digite sua senha",
+  "PASSWORD_REQUIRED": "Senha é obrigatória.",
+  "PASSWORD_MINLENGTH": "A senha deve ter pelo menos 6 caracteres.",
+  "CONFIRM_PASSWORD_LABEL": "Confirmar Senha",
+  "CONFIRM_PASSWORD_PLACEHOLDER": "Confirme sua senha",
+  "CONFIRM_PASSWORD_REQUIRED": "Confirmação de senha é obrigatória.",
+  "PASSWORDS_NOT_MATCHING": "As senhas não coincidem.",
+  "REGISTER_BUTTON": "Registrar",
+  "ALREADY_HAVE_ACCOUNT": "Já possui uma conta? Faça login",
+  "LOGIN_BUTTON": "Faça login",
+  "BACK_BUTTON": "Voltar",
+  "HEADER": {
+    "TITLE": "IT Works",
+    "DESCRIPTION": "A IT Works é uma empresa de inteligência fiscal que através da tecnologia promove o aumento de eficiência, produtividade e performance na área fiscal e tributária dos nossos clientes e parceiros. Somos uma equipe de profissionais altamente especializados nas áreas contábil, fiscal, tributária, legislativa e de tecnologia com o propósito de oferecer soluções completas para inteligência fiscal desde 2010. Consideramos desde o início que não importa o porte da empresa, nossa missão sempre é entregar a solução adequada com rapidez, segurança e transparência!",
+    "GET_QUOTE": "Solicite um Orçamento",
+    "LEARN_MORE": "Saiba Mais"
+  },
+  "PRACTICE_ADVICE": {
+    "TITLE": "Conheça nossas soluções",
+    "DESCRIPTION": "Conheça nossas soluções"
+  },
+  "WHO_WE_ARE": {
+    "TITLE": "Quem Somos"
+  },
+  "LOGIN": {
+    "ALREADY_HAVE_ACCOUNT": "Já possui uma conta?",
+    "LOGIN_BUTTON": "Entrar"
+  }
+}
+
+

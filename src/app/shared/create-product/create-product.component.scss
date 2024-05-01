@@ -1,0 +1,45 @@
+.create-product-form {
+  max-width: 500px;
+  margin: 0 auto;
+
+  .p-field {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    .p-error {
+      color: #f44336;
+    }
+  }
+
+  .p-button {
+    margin-top: 1rem;
+  }
+
+  .image-upload {
+    margin-bottom: 1.5rem;
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .p-button {
+      margin-right: 1rem;
+    }
+
+    .image-preview {
+      max-width: 200px;
+      max-height: 200px;
+      margin-top: 1rem;
+    }
+  }
+}

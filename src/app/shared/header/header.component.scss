@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+::ng-deep {
+  .p-toolbar {
+    background-color: $primary-color;
+    color: #FFF;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($primary-color, 5%);
+    }
+
+    .p-toolbar-group-left {
+      .p-button {
+        background-color: transparent;
+        color: #FFF;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .p-toolbar-group-right {
+      .p-button {
+        &.p-button-warning {
+          background-color: $secondary-color;
+          color: #FFF;
+          border: none;
+          padding: 0.5rem 1rem;
+          font-weight: 500;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken($secondary-color, 10%);
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 2px rgba($secondary-color, 0.5);
+          }
+        }
+
+        &:not(.p-button-warning) {
+          background-color: transparent;
+          color: #FFF;
+          border: none;
+          padding: 0.5rem 1rem;
+          font-weight: 500;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
