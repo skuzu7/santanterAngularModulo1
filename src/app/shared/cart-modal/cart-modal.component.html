@@ -5,16 +5,17 @@
       O carrinho está vazio.
     </div>
     <div *ngFor="let item of cartItems" class="cart-item">
+      <img [src]="item.image" class="item-image" alt="{{ item.name }}"/>
       <div class="item-info">
         <span class="item-name">{{ item.name }}</span>
         <span class="item-price">{{ item.price | currency:'BRL' }}</span>
       </div>
       <div class="item-quantity">
-        <button (click)="decrementQuantity(item)">-</button>
+        <button pButton icon="pi pi-minus" class="qty-btn" (click)="decrementQuantity(item)"></button>
         <span>{{ item.amount }}</span>
-        <button (click)="incrementQuantity(item)">+</button>
+        <button pButton icon="pi pi-plus" class="qty-btn" (click)="incrementQuantity(item)"></button>
       </div>
-      <button class="remove-item" (click)="removeItem(item)">Remover</button>
+      <button pButton icon="pi pi-trash" class="remove-item" (click)="removeItem(item)"></button>
     </div>
   </div>
   <div class="cart-summary">
@@ -22,7 +23,7 @@
       <span>Total:</span>
       <span>{{ getTotal() | currency:'BRL' }}</span>
     </div>
-    <button class="clear-cart" (click)="clearCart()">Limpar Carrinho</button>
-    <button class="checkout" (click)="checkout()">Finalizar Compra</button>
+    <button pButton label="Limpar Carrinho" icon="pi pi-times" class="clear-cart" (click)="clearCart()"></button>
+    <button pButton label="Finalizar Compra" icon="pi pi-check" class="checkout" (click)="checkout()"></button>
   </div>
 </div>

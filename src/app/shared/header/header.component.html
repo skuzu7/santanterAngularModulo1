@@ -1,14 +1,14 @@
 <p-toolbar>
   <div class="p-toolbar-group-left">
-    <p-button label="Home" routerLink="/home"></p-button>
-    <p-button label="Produtos" routerLink="/products"></p-button>
-    <p-button label="Create" routerLink="/create-item"></p-button> <!-- New Create button -->
-    <p-button label="Sobre" routerLink="/about"></p-button>
-    <p-button label="Contato" routerLink="/contact"></p-button>
+    <p-button label="Home" routerLink="/home" styleClass="primary-btn"></p-button>
+    <p-button label="Produtos" routerLink="/products" styleClass="primary-btn"></p-button>
+    <p-button label="Create" routerLink="/create-item" styleClass="primary-btn"></p-button>
+    <p-button label="Sobre" routerLink="/about" styleClass="primary-btn"></p-button>
+    <p-button label="Contato" routerLink="/contact" styleClass="primary-btn"></p-button>
   </div>
   <div class="p-toolbar-group-right">
     <p-button icon="pi pi-shopping-cart" styleClass="p-button-warning" label="Carrinho"
-              badge="{{ cartService.getCartItemCount() }}" badgeClass="p-badge-danger"
-              (click)="cartService.openCartModal()"></p-button>
+    badge="{{ cartItemCount }}" badgeClass="p-badge-danger" (click)="openCart()">
+</p-button>
   </div>
 </p-toolbar>

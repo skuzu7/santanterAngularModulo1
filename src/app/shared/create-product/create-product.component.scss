@@ -1,45 +1,58 @@
+@import "../../../styles.scss";
+
 .create-product-form {
   max-width: 500px;
   margin: 0 auto;
 
   .p-field {
-    margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
 
-    label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
+      label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          color: $text-color;
+      }
 
-    input,
-    textarea {
-      width: 100%;
-    }
+      input,
+      textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
 
-    .p-error {
-      color: #f44336;
-    }
+      .p-error {
+          color: #f44336;
+      }
   }
 
   .p-button {
-    margin-top: 1rem;
+      background-color: $primary-color;
+      color: $text-color-light;
+      margin-top: 1rem;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+          background-color: lighten($primary-color, 10%);
+      }
   }
 
   .image-upload {
-    margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
 
-    input[type="file"] {
-      display: none;
-    }
+      input[type="file"] {
+          display: none;
+      }
 
-    .p-button {
-      margin-right: 1rem;
-    }
-
-    .image-preview {
-      max-width: 200px;
-      max-height: 200px;
-      margin-top: 1rem;
-    }
+      .image-preview {
+          max-width: 200px;
+          max-height: 200px;
+          margin-top: 1rem;
+          border-radius: 4px;
+      }
   }
 }

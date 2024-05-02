@@ -6,7 +6,7 @@
       <div class="hero-banner">
         <h1>Bem-vindo à Growth Supplements</h1>
         <p>Encontre os melhores suplementos para o seu crescimento muscular.</p>
-        <button pButton type="button" label="Comprar Agora" icon="pi pi-shopping-cart" class="p-button-raised p-button-primary" routerLink="/products"></button>
+        <p-button label="Comprar Agora" icon="pi pi-shopping-cart" styleClass="p-button-raised p-button-primary" routerLink="/products"></p-button>
       </div>
     </div>
   </section>
@@ -21,10 +21,9 @@
           </div>
           <div class="product-details">
             <h3>{{ product.name }}</h3>
-            <!-- Exibe a descrição se disponível -->
             <p *ngIf="product.description">{{ product.description }}</p>
             <p class="product-price" *ngIf="product.price">{{ product.price | currency:'BRL' }}</p>
-            <button pButton type="button" label="Adicionar ao Carrinho" icon="pi pi-plus" class="p-button-success" (click)="addToCart(product)"></button>
+            <p-button label="Adicionar ao Carrinho" icon="pi pi-plus" styleClass="p-button-success" (click)="addToCart(product)"></p-button>
           </div>
         </div>
       </div>

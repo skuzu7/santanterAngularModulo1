@@ -28,6 +28,7 @@ import { CreateProductComponent } from 'src/app/shared/create-product/create-pro
 import { FooterComponent } from 'src/app/shared/footer/footer.component';
 import { HeaderComponent } from 'src/app/shared/header/header.component';
 import { HomeComponent } from './home.component';
+import { MessageModule } from 'primeng/message';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { HomeComponent } from './home.component';
     InputNumberModule,
     InputTextModule,
     FileUploadModule,
+    MessageModule,
 
 
 

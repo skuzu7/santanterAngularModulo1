@@ -1,72 +1,51 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-::ng-deep {
+:host ::ng-deep {
   .p-toolbar {
-    background-color: $primary-color;
-    color: #FFF;
-    padding: 1rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    background: #101824; // Cor principal do fundo
+    color: $text-color-light;
+    border-radius: 0; // Remover o arredondamento para combinar com a barra da imagem
+    box-shadow: none; // Remover sombra para um visual mais plano como na imagem
+    padding: 10px;
+    transition: none; // Remover transição para manter o estilo estático
 
-    &:hover {
-      background-color: darken($primary-color, 5%);
-    }
+    .p-toolbar-group-left,
+    .p-toolbar-group-right {
+      display: flex;
+      align-items: center;
 
-    .p-toolbar-group-left {
       .p-button {
-        background-color: transparent;
-        color: #FFF;
-        border: none;
-        padding: 0.5rem 1rem;
-        margin-right: 1rem;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
+        margin: 0 10px;
+        border: none; // Remover bordas para um visual mais plano
+        background-color: transparent; // Fundo transparente
+        color: #fff; // Texto branco
+        font-weight: bold;
 
         &:hover {
-          background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        &:focus {
-          box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+          background-color: #2c3e50; // Um escuro sutil ao passar o mouse
+          box-shadow: none; // Sem sombra ao passar o mouse
+          transform: none; // Sem transformação ao passar o mouse
         }
       }
     }
 
     .p-toolbar-group-right {
-      .p-button {
-        &.p-button-warning {
-          background-color: $secondary-color;
-          color: #FFF;
-          border: none;
-          padding: 0.5rem 1rem;
-          font-weight: 500;
-          transition: background-color 0.3s ease;
+      justify-content: flex-end;
 
-          &:hover {
-            background-color: darken($secondary-color, 10%);
-          }
+      .p-button-warning {
+        background-color: #c51b1b; // Cor dos botões destacados
+        color: #fff; // Texto branco para contraste
 
-          &:focus {
-            box-shadow: 0 0 0 2px rgba($secondary-color, 0.5);
-          }
+        &:hover {
+          background-color: #da6868; // Um vermelho mais claro ao passar o mouse
         }
+      }
 
-        &:not(.p-button-warning) {
-          background-color: transparent;
-          color: #FFF;
-          border: none;
-          padding: 0.5rem 1rem;
-          font-weight: 500;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-
-          &:focus {
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-          }
+      .p-badge {
+        &.p-badge-danger {
+          background-color: #e74c3c; // Um vermelho para badges de perigo
+          border-radius: 50%;
+          box-shadow: none; // Remover sombra para consistência
         }
       }
     }

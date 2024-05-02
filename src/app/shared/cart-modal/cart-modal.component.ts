@@ -1,3 +1,4 @@
+// cart-modal.component.ts
 import { Component, OnInit } from '@angular/core';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Product } from 'src/app/models/interfaces/products/product';

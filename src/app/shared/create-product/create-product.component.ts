@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { MessageService } from 'primeng/api';
 import { ProductService } from 'src/app/services/products/product.service';
 
@@ -26,7 +25,7 @@ export class CreateProductComponent {
     });
   }
 
-  onImageSelected(event: any) {
+  onImageSelected(event: any): void {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -38,19 +37,18 @@ export class CreateProductComponent {
     }
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.productForm.valid) {
-      const product = this.productForm.value;
-      this.productService.createProduct(product).subscribe(
-        (response) => {
+      this.productService.createProduct(this.productForm.value).subscribe({
+        next: (response) => {
           this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Product created successfully' });
           this.productForm.reset();
           this.selectedImage = null;
         },
-        (error) => {
+        error: (error) => {
           this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Failed to create product' });
         }
-      );
+      });
     }
   }
 }

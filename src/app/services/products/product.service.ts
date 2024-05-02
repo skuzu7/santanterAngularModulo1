@@ -6,7 +6,7 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'https://crudcrud.com/api/46b3141afbf44dcfa82fd5aaa5469d89/products';
+  private baseUrl = 'https://crudcrud.com/api/95e90fd1d3624814b8ac01e874c0a040/products';
 
   constructor(private http: HttpClient) {}
 
