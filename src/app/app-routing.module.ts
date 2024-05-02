@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from 'src/guards/auth.guard';
-import { HomeComponent } from './modules/home/home.component'; // Importe o componente HomeComponent
+import { HomeComponent } from './modules/home/home.component';
 import { RegisterComponent } from './modules/register/register.component';
 import { CreateProductComponent } from './shared/create-product/create-product.component';
 
@@ -12,7 +12,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'create-item', component: CreateProductComponent },
-  { path: 'register', component: RegisterComponent },
+
+  //to implements
+  { path: 'register', component: RegisterComponent }, //to implements
   { path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuard] }, //lazy loading
 ];
 

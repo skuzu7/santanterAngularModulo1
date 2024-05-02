@@ -1,5 +1,5 @@
 // header.component.ts
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { CartService } from 'src/app/services/cart/cart.service';
 import { Subscription } from 'rxjs';
 
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
   cartItemCount: number = 0;
+  @Input() showCartIcon: boolean = true;
 
   constructor(public cartService: CartService) {}
 

@@ -1,5 +1,5 @@
 // cart-modal.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Product } from 'src/app/models/interfaces/products/product';
 import { CartService } from 'src/app/services/cart/cart.service';
@@ -11,6 +11,7 @@ import { CartService } from 'src/app/services/cart/cart.service';
 })
 export class CartModalComponent implements OnInit {
   cartItems: Product[] = [];
+  @Output() cartCleared = new EventEmitter<boolean>();
 
   constructor(private cartService: CartService, public ref: DynamicDialogRef) {}
 
@@ -34,6 +35,8 @@ export class CartModalComponent implements OnInit {
 
   clearCart(): void {
     this.cartService.clearCart();
+    this.cartCleared.emit(true);
+    this.ref.close();
   }
 
   getTotal(): number {
@@ -41,7 +44,7 @@ export class CartModalComponent implements OnInit {
   }
 
   checkout(): void {
-    console.log('Finalizando a compra...');
+    console.log('Finalizing purchase...');
     this.ref.close();
   }
 }
