@@ -1,40 +1,43 @@
 
 # Santanter Angular Module 1
 
-This project is part of the Angular training program at Santander. It covers the basics of Angular and demonstrates the concepts learned in Module 1.
-
+This repository is part of an Angular training initiative by Santander, focusing on Angular 15. It aims to provide foundational Angular skills through practical examples and exercises.
 
 ## Installation
 
-To run this project locally, follow these steps:
+To run this project locally, you will need to perform the following steps:
 
-1. Clone the repository:
-git clone https://github.com/skuzu7/santanterAngularModulo1.git
+1. **Clone the Repository:**
+   ```
+   git clone https://github.com/skuzu7/santanterAngularModulo1.git
+   ```
 
+2. **Navigate to the Project Directory:**
+   ```
+   cd santanterAngularModulo1
+   ```
 
-2. Navigate to the project directory:
-cd santanterAngularModulo1
-
-
-3. Install the dependencies:
-npm install
-
+3. **Install Dependencies with Legacy Peer Deps:**
+   Angular 15 has specific requirements for peer dependencies, which can be addressed by:
+   ```
+   npm install --legacy-peer-deps
+   ```
 
 ## Usage
 
-To start the development server and run the project, use the following command:
+**Start the Development Server:**
+Launch the application using:
+```
 ng serve
-
-
-Open your browser and visit `http://localhost:4200` to see the application running.
+```
+Then, access it by visiting `http://localhost:4200` in your browser.
 
 ## Features
 
-This project includes the following features:
+- **Modern Angular Practices:** Utilizes Angular 15 to demonstrate state-of-the-art practices in component architecture, data binding, and service management.
+- **PrimeNG UI Components:** Integrates PrimeNG for rich UI components that enhance the interface.
+- **SCSS Styling:** Employs SCSS for advanced styling capabilities, facilitating more dynamic and maintainable CSS.
+- **Responsive Design:** Ensures that the application is responsive and functions well across different devices and resolutions.
 
-- Basic Angular components and templates
-- Data binding and event handling
-- Routing and navigation
-- Services and dependency injection
-- HTTP requests and data fetching
+---
 
